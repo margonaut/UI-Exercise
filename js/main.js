@@ -1,8 +1,14 @@
 var Game = {
   players: []
 }
-
 var players = Game.players;
+
+function rankPlayers() {
+  for (var i = 0; i < players.length; i++) {
+    var currentPlayer = players[i]
+    debugger;
+  }
+}
 
 function Player(name, score){
   this.name = name;
@@ -35,4 +41,5 @@ $('#add').on("click", function(event) {
   } else {
     alert("Invalid input")
   }
+  rankPlayers();
 });
