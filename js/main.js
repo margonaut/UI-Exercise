@@ -4,10 +4,21 @@ var Game = {
 var players = Game.players;
 
 function rankPlayers() {
-  for (var i = 0; i < players.length; i++) {
-    var currentPlayer = players[i]
-    debugger;
+  players.sort(function(a, b) {
+    if (a.score > b.score) {
+      return 1;
+    } else if (a.score < b.score) {
+      return -1;
+    } else if (a.score == b.score) {
+      return 0;
+    }
   }
+});
+}
+
+function writePlayers(rankPlayers()) {
+  $("#rankings").remove();
+  debugger;
 }
 
 function Player(name, score){
