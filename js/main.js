@@ -3,17 +3,21 @@ var Game = {
 }
 var players = Game.players;
 
+// function rankPlayers() {
+//   players.sort(function(a, b) {
+//     if (a.score > b.score) {
+//       return 1;
+//     } else if (a.score < b.score) {
+//       return -1;
+//     } else if (a.score == b.score) {
+//       return 0;
+//     }
+//   }
+// });
+// }
+
 function rankPlayers() {
-  players.sort(function(a, b) {
-    if (a.score > b.score) {
-      return 1;
-    } else if (a.score < b.score) {
-      return -1;
-    } else if (a.score == b.score) {
-      return 0;
-    }
-  }
-});
+
 }
 
 function writePlayers(rankPlayers()) {
@@ -24,6 +28,7 @@ function writePlayers(rankPlayers()) {
 function Player(name, score){
   this.name = name;
   this.score = score;
+  this.rank = 1;
 }
 
 function nameMatch(value) {
